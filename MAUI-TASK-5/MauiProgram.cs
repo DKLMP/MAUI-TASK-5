@@ -1,4 +1,6 @@
-﻿namespace MAUI_TASK_5;
+﻿using MAUI_TASK_5.ViewModel;
+
+namespace MAUI_TASK_5;
 
 public static class MauiProgram
 {
@@ -12,6 +14,9 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
+		builder.Services.AddSingleton<MainPage>();
+		builder.Services.AddSingleton<MainViewModel>();
+
 
 		return builder.Build();
 	}
